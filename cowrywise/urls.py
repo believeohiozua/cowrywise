@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from sampleapi.views import UuidGeneratorViews
+from sampleapi.views import UuidGeneratorViews, index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path('',index,name='index'),
      path('uuid-api/', 
      UuidGeneratorViews.as_view(), 
      name='uuid-api'),

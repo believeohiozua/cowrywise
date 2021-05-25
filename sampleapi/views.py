@@ -1,9 +1,12 @@
 from rest_framework import views
 from rest_framework.response import Response
 from .serializer import UuidGeneratorSerializer
+from django.http import HttpResponse
 from .models import UuidGenerator
-import json
+import requests
 
+def index(request):
+    return HttpResponse(requests.get('https://cowrywise.com/'))
 
 class UuidGeneratorViews(views.APIView):
     serializer_class = UuidGeneratorSerializer
