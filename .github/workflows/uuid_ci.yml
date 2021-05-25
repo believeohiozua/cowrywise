@@ -27,7 +27,7 @@ jobs:
         pip install -r requirements.txt
     - name: Run Django Flake8
       run: |
-        flake8
+        python -m flake8
     - name: Make Migrations
       run: |
         python manage.py makemigrations
