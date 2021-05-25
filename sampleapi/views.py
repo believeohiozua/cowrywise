@@ -5,8 +5,10 @@ from django.http import HttpResponse
 from .models import UuidGenerator
 import requests
 
+
 def index(request):
     return HttpResponse(requests.get('https://cowrywise.com/'))
+
 
 class UuidGeneratorViews(views.APIView):
     serializer_class = UuidGeneratorSerializer
@@ -14,11 +16,11 @@ class UuidGeneratorViews(views.APIView):
     def get(self, request, format=None):
         get_uuid = UuidGenerator.objects.values('uuid')
         get_timestamp = UuidGenerator.objects.values('timestamp').order_by('-timestamp')
-        data={}
+        data = {}
         for key in get_timestamp:
-            key=str(key.get('timestamp'))
-            for value in get_uuid:                
-                value = str(value.get('uuid')).replace('-','')
+            key = str(key.get('timestamp'))
+            for value in get_uuid:
+                value = str(value.get('uuid')).replace('-', '')
                 data[key] = value
                 break
         return Response(data)

@@ -19,9 +19,6 @@ from sampleapi.views import UuidGeneratorViews, index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('',index,name='index'),
-     path('uuid-api/', 
-     UuidGeneratorViews.as_view(), 
-     name='uuid-api'),
-
+    path('', index, name='index'),
+    path('uuid-api/', UuidGeneratorViews.as_view(), name='uuid-api'),
 ]

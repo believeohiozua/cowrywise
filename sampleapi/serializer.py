@@ -7,5 +7,3 @@ class UuidGeneratorSerializer(serializers.ModelSerializer):
     class Meta:
         model = UuidGenerator
         fields = '__all__'
-
-  

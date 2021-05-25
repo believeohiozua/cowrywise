@@ -3,7 +3,7 @@ import uuid
 
 
 class UuidGenerator(models.Model):
-    uuid = models.UUIDField(unique=True, default=uuid.uuid4) 
+    uuid = models.UUIDField(unique=True, default=uuid.uuid4)
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
