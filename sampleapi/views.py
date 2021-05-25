@@ -10,7 +10,7 @@ class UuidGeneratorViews(views.APIView):
 
     def get(self, request, format=None):
         get_uuid = UuidGenerator.objects.values('uuid')
-        get_timestamp = UuidGenerator.objects.values('timestamp')
+        get_timestamp = UuidGenerator.objects.values('timestamp').order_by('-timestamp')
         data={}
         for key in get_timestamp:
             key=str(key.get('timestamp'))
