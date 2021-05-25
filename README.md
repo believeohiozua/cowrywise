@@ -43,8 +43,13 @@
 - ### repository 
 - - https://github.com/believeohiozua/cowrywise.git
 
+- ### UUID API Endpoint 
+- - https://cowrywiseuuid.herokuapp.com/uuid-api/
+
 - ### Hosted web application 
 - - https://cowrywiseuuid.herokuapp.com/
 
 - ### postman collection
 - - https://documenter.getpostman.com/view/13743580/TzXunfGn
+
+
